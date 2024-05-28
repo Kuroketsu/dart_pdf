@@ -53,9 +53,7 @@ class PrintingPlugin extends PrintingPlatform {
 
   final _loading = Mutex();
 
-  bool get _hasPdfJsLib => js.context.callMethod('eval', <String>[
-        'typeof pdfjsLib !== "undefined" && pdfjsLib.GlobalWorkerOptions.workerSrc != "";'
-      ]);
+  bool get _hasPdfJsLib => true;
 
   /// The base URL for loading pdf.js library
   late String _pdfJsUrlBase;
